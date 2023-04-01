@@ -1,0 +1,250 @@
+/* ???????????Custon Color======================== */
+
+:root {
+  --bg-clr: 0 0% 100%;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =============Utility Class==================== */
+
+.body {
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  align-self: center;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.home {
+  background-image: url(/Image/background.png);
+}
+
+.container {
+  padding-inline: 1rem;
+  margin-inline: auto;
+  max-width: 80rem;
+  background: hsl(var(--bg-clr) / 0.95);
+  min-height: 96vh;
+  margin-top: 0.8rem;
+  border-radius: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+  grid-template-rows: repeat(1fr);
+}
+
+.container-home {
+  grid-template-columns: 1fr 4fr;
+}
+
+/* ============Side Bar================== */
+
+.sidebar-Menu {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.sldebar-menu img {
+  height: 10px;
+}
+
+.sidebar-items {
+  --gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.menu-items {
+  --gap: 1rem;
+}
+
+.menu-items > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  cursor: pointer;
+}
+
+.sidebar-items img {
+  width: 20px;
+  height: 20px;
+}
+
+.chat-icon {
+  margin-top: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.chat-icon p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============SideBar++++++++++++++++++++++++++++++ */
+
+/* +++++++++++++++++++Main Content++++++++++++++ */
+
+.main-content{
+    height: 100%;
+}
+
+.primary-header {
+  margin-top: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-search img {
+  width: 20px;
+  height: auto;
+}
+
+.header-search input {
+  outline: 0;
+  border: 0;
+  background: hsl(var(--bg-clr) / 0.1);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.primary-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-navigation > li:hover,
+.primary-navigation > li:focus {
+    border-bottom: 2px solid #000000;
+}
+
+
+.primary-navigation > .active {
+    border-bottom: 2px solid #000000;
+}
+
+
+.primary-navigation a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  padding-inline: 1rem;
+}
+
+.cart-icon{
+    padding-inline: 2rem;
+    --gap: 2rem;
+    cursor: pointer;
+}
+
+/* ===============main container================ */
+
+
+.main-inner-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.secont-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* =========Media Quarie==================== */
+
+@media (max-width: 25rem){
+    .sidebar-Menu{
+        display: none;
+    }
+}
